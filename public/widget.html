@@ -1,0 +1,311 @@
+<div class="omn-container">
+  <div id="omn-widget" class="omn-widget">
+
+    <div class="wid-header minimized">
+
+      <div class="wid-header-photo">
+        <span class="wid-header-frame"></span>
+      </div>
+
+      <div class="wid-header-title">
+        <h4 class="wid-header-text" data-message="header-main"></h4>
+      </div>
+
+      <div class="wid-header-actions">
+        <ul class="wid-header-actions-list">
+          <li class="wid-header-action-item minimize hide">
+            <a href="#minimize" title="[[minimize]]" class="subAct" data-action="minimize"><i class="fa fa-chevron-down"></i></a>
+          </li>
+          <li class="wid-header-action-item maximize">
+            <a href="#maximize" title="[[maximize]]" class="subAct" data-action="maximize"><i class="fa fa-chevron-up"></i></a>
+          </li>
+          <li class="wid-header-action-item close">
+            <a href="#close" title="[[close]]" class="subAct" data-action="close"><i class="fa fa-close"></i></a>
+          </li>
+          <li class="wid-header-action-item minmax">
+            <a href="#minmax" title="[[close]]" class="subAct" data-action="maximize">
+            </a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="wid-body">
+
+      <!-- DEPARTMENT -->
+      <div class="wid-department dad dpt">
+        <h3 class="wid-body-title" data-message="department-title"></h3>
+
+        <div class="wid-body-actions">
+          <select class="wid-department-list">
+            <option value="null" data-message="department-select"></option>
+          </select>
+        </div>
+      </div>
+      <!-- // DEPARTMENT -->
+
+      <!-- CHANNEL -->
+      <div class="wid-channel dad cho">
+        <h3 class="wid-body-title" data-message="channel-title"></h3>
+
+        <div class="wid-body-actions">
+          <ul class="wid-channel-list">
+            <li class="wid-channel-item" data-channel="CHAT">
+              <a href="#message" title="[[cho-message]]" class="act msg bcBack" data-action="act-mes-inv">
+                <i class="cho-message"></i>
+                <span class="wid-channel-name" data-message="channel-name-chat"></span>
+              </a>
+            </li>
+            <li class="wid-channel-item" data-channel="VOICE">
+              <a href="#voice" title="[[cho-voice]]" class="act voi" data-action="act-voi-test">
+                <i class="cho-voice"></i>
+                <span class="wid-channel-name" data-message="channel-name-voice"></span>
+              </a>
+            </li>
+            <li class="wid-channel-item" data-channel="VIDEO">
+              <a href="#video" title="[[cho-video]]" class="act vid" data-action="act-vid-test">
+                <i class="cho-video"></i>
+                <span class="wid-channel-name" data-message="channel-name-video"></span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- // CHOOSE -->
+
+      <!--  CHANNEL CHAT -->
+      <div class="wid-channel dad unavailable">
+        <h3 class="wid-body-title" data-message="channel-unavailable-title"></h3>
+
+        <span class="wid-body-text" data-message="channel-unavailable-text"></span>
+
+        <div class="wid-body-actions">
+          <ul class="wid-channel-list">
+            <li class="wid-channel-item show">
+              <a href="#message" title="[[cho-message]]" class="act msg bcBack" data-action="act-mes-inv">
+                <i class="cho-message"></i>
+                <span class="wid-channel-name">chat</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- // CHANNEL CHAT -->
+
+      <!-- VOICE -->
+
+      <!-- voice running -->
+      <div class="wid-voice dad run">
+        <h3 class="wid-body-title" data-message="voice-run-title"></h3>
+
+        <span class="wid-body-duration chrono" data-chrono="audio"></span>
+
+        <div class="wid-voice-src">
+          <audio id="remote-audio-stream"></audio>
+        </div>
+
+        <div class="wid-body-actions">
+          <ul class="loader">
+            <li><i class="ico-user1"></i></li>
+            <li class="connector">
+              <div class="connector-in">
+                <div class="spinner">
+                  <div class="ball ball-1"></div>
+                  <div class="ball ball-2"></div>
+                  <div class="ball ball-3"></div>
+                  <div class="ball ball-4"></div>
+                </div>
+              </div>
+            </li>
+            <li><i class="ico-user2"></i></li>
+          </ul>
+
+          <ul class="wid-action-list">
+            <li><a href="#turn-off" title="[[turn-off]]" class="subAct act-turnOff" data-action="off">[[turn-off]]</a></li>
+          </ul>
+        </div>
+      </div>
+      <!-- // voice running -->
+
+      <!-- voice testing -->
+      <div class="wid-voice dad test">
+        <h3 class="wid-body-title" data-message="test-title"></h3>
+
+        <div class="wid-voice-src">
+          <audio data-player="audio" class="wid-voice-src" loop></audio>
+        </div>
+
+        <div data-title="welcome-audio">
+          <span class="wid-body-text" data-message="voice-test-welcome"></span>
+        </div>
+
+        <div class="wid-body-actions">
+          <ul class="wid-action-list" data-test="audio">
+            <li><a href="#accept" title="[[accept-voice]]" class="subAct but-accept call" data-action="act-voi-conn">[[accept-voice]]</a></li>
+            <li><a href="#deny" title="[[retry-voice]]" class="subAct but-deny" data-action="act-voi-retry">[[retry-voice]]</a></li>
+          </ul>
+
+          <ul class="loader" data-loader="audio">
+            <li><i class="ico-user1"></i></li>
+            <li class="connector">
+              <div class="connector-in">
+                <div class="spinner">
+                  <div class="ball ball-1"></div>
+                  <div class="ball ball-2"></div>
+                  <div class="ball ball-3"></div>
+                  <div class="ball ball-4"></div>
+                </div>
+              </div>
+            </li>
+            <li><i class="ico-user2"></i></li>
+          </ul>
+        </div>
+      </div>
+      <!-- // voice testing -->
+
+      <!-- VIDEO -->
+
+      <!-- video running -->
+      <div class="wid-video dad run">
+        <h3 class="wid-body-title" data-message="video-run-title"></h3>
+
+        <span class="wid-body-duration chrono" data-chrono="video">00:00</span>
+
+        <div class="wid-video-src">
+          <div class="wid-video-src-local">
+            <video id="local-video-stream"></video>
+          </div>
+          <div class="wid-video-src-remote">
+            <video id="remote-video-stream"></video>
+          </div>
+        </div>
+
+        <div class="wid-body-actions">
+          <ul class="wid-action-list">
+            <li><a href="#turn-off" title="[[turn-off]]" class="subAct act-turnOff" data-action="off">[[turn-off]]</a></li>
+          </ul>
+        </div>
+      </div>
+      <!-- // video running -->
+
+      <!-- video testing -->
+      <div class="wid-video dad test">
+        <h3 class="wid-body-title" data-message="test-title"></h3>
+
+        <div class="wid-video-src">
+          <video class="wid-video-src-remote" data-player="video" loop></video>
+        </div>
+
+        <div data-title="welcome-video">
+          <span class="wid-body-text" data-message="video-test-welcome"></span>
+        </div>
+
+        <div class="wid-body-actions">
+          <ul class="wid-action-list" data-test="video">
+            <li><a href="#accept" title="[[accept-video]]" class="subAct but-accept call" data-action="act-vid-conn">[[accept-video]]</a></li>
+            <li><a href="#deny" title="[[retry-video]]" class="subAct but-deny" data-action="act-vid-retry">[[retry-video]]</a></li>
+          </ul>
+
+          <ul class="loader" data-loader="video">
+            <li><i class="ico-user1"></i></li>
+            <li class="connector">
+              <div class="connector-in">
+                <div class="spinner">
+                  <div class="ball ball-1"></div>
+                  <div class="ball ball-2"></div>
+                  <div class="ball ball-3"></div>
+                  <div class="ball ball-4"></div>
+                </div>
+              </div>
+            </li>
+            <li><i class="ico-user2"></i></li>
+          </ul>
+        </div>
+      </div>
+      <!-- // video testing -->
+
+      <!-- RATING -->
+      <div class="wid-rating dad rat">
+        <h3 class="wid-body-title" data-message="rating-title"></h3>
+
+        <span class="wid-body-text" data-message="rating-question"></span>
+
+        <div class="wid-body-actions">
+          <ul class="wid-action-list">
+            <li><a href="#accept" title="[[accept-video]]" class="subAct but-like" data-action="like">[[accept-video]]</a></li>
+            <li><a href="#deny" title="[[retry-video]]" class="subAct but-unlike" data-action="unlike">[[retry-video]]</a></li>
+          </ul>
+        </div>
+      </div>
+      <!-- RATING -->
+
+      <!-- OFFLINE -->
+      <div class="wid-offline dad form">
+        <h3 class="wid-body-title" data-message="offline-form-title"></h3>
+
+        <span class="wid-body-text" data-message="offline-form-text"></span>
+
+        <form class="form-group" data-form="offline">
+          <input type="text" name="name" class="form-input" placeholder="Nome" />
+          <input type="email" name="email" class="form-input" placeholder="E-Mail" />
+          <input type="text" name="phone" class="form-input" placeholder="Telefone" />
+          <textarea type="text" name="observation" class="form-textarea" placeholder="Assunto"></textarea>
+
+          <div class="wid-offline-messages"></div>
+
+          <button type="button" class="form-button btn-danger" data-action="sendform">Enviar</button>
+        </form>
+
+      </div>
+
+      <div class="wid-offline dad suc">
+        <h3 class="wid-body-title" data-message="offline-success-title"></h3>
+        <span class="wid-body-text" data-message="offline-success-text"></span>
+      </div>
+      <!-- // OFFLINE -->
+
+      <!-- MESSAGE -->
+      <div class="wid-message dad inv">
+        <div class="msg-wrapper">
+          <div class="wid-messages-list">
+          </div>
+        </div>
+        <textarea id="msg-source" class="form-textarea" placeholder="Preencha com a sua mensagem"></textarea>
+        <a href="#off" title="[[off]]" class="subAct wid-message-off" data-action="off" data-message="action-off"></a>
+      </div>
+
+      <div class="wid-message dad end">
+        <h3 class="wid-body-title" data-message="message-end-title"></h3>
+
+        <span class="wid-body-text" data-message="message-end-text"></span>
+
+        <div class="wid-body-actions">
+          <ul class="wid-action-list">
+            <li><a href="#accept" title="[[accept-copy]]" class="subAct but-accept" data-action="receive">[[accept-message]]</a></li>
+            <li><a href="#deny" title="[[deny-copy]]" class="subAct but-deny" data-action="noreceive">[[retry-message]]</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="wid-message dad copy">
+        <h3 class="wid-body-title" data-message="message-copy-title"></h3>
+
+        <form class="form-group">
+          <input type="email" name="txt-email" id="txt-email" class="form-input" placeholder="E-Mail" />
+          <button type="button" class="form-button btn-danger">Enviar</button>
+        </form>
+      </div>
+      <!-- // MESSAGE -->
+
+    </div>
+
+    <div class="wid-footer">
+      <a href="http://www.omnize.com" title="Omnize" class="wid-footer-powered">Powered By Omnize</a>
+    </div>
+  </div>
+
+  <div class="omn-frame">
+    <p class="omn-frame-message" data-message="frame-permission-text"></p>
+  </div>
+</div>
